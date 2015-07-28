@@ -59,3 +59,20 @@ This plugin allows you to stream audio and video in a fullscreen, native player 
   };
   window.plugins.streamingMedia.playAudio(audioUrl, options);
 ```
+
+## 3. Modifications in Fork
+Trigger Event callback for  MPMoviePlayerLoadStateDidChangeNotification notifications
+```
+Unknown
+The load state is not known.
+
+Available in iOS 3.2 and later.
+Playable
+The buffer has enough data that playback can begin, but it may run out of data before playback finishes.
+
+PlaythroughOK
+Enough data has been buffered for playback to continue uninterrupted.
+
+Stalled
+The buffering of data has stalled. If started now, playback may pause automatically if the player runs out of buffered data.
+```

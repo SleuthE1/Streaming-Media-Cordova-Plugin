@@ -167,6 +167,13 @@ NSString * const DEFAULT_IMAGE_SCALE = @"center";
 											 selector:@selector(moviePlayBackDidFinish:)
 												 name:MPMoviePlayerPlaybackDidFinishNotification
 											   object:moviePlayer];
+
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(moviePlayerLoadStateDidChange:)
+												 name:MPMoviePlayerLoadStateDidChangeNotification
+											   object:moviePlayer];
+
+
 	// Listen for click on the "Done" button
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(doneButtonClick:)
@@ -219,6 +226,10 @@ NSString * const DEFAULT_IMAGE_SCALE = @"center";
 	}
 }
 
+-(void) moveiePlayerLoadStateDidChange:(NSNotification*)notification {
+
+}
+
 -(void)doneButtonClick:(NSNotification*)notification{
 	[self cleanup];
 
@@ -241,6 +252,13 @@ NSString * const DEFAULT_IMAGE_SCALE = @"center";
 							removeObserver:self
 									  name:MPMoviePlayerPlaybackDidFinishNotification
 									object:moviePlayer];
+
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+											 selector:@selector(moviePlayerLoadStateDidChange:)
+												 name:MPMoviePlayerLoadStateDidChangeNotification
+											   object:moviePlayer];
+
 	// Remove orientation change listener
 	[[NSNotificationCenter defaultCenter]
 							removeObserver:self
