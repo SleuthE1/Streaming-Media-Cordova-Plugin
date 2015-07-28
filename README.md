@@ -4,7 +4,7 @@ for iOS and Android, by [Nicholas Hutchind](https://github.com/nchutchind) modif
 
 1. [Description](https://github.com/mcsqd/Streaming-Media-Cordova-Plugin#1-description)
 2. [Usage](https://github.com/mcsqd/Streaming-Media-Cordova-Plugin#2-usage)
-3. [Modifications](https://github.com/mcsqd/Streaming-Media-Cordova-Plugin#3-modifications)
+3. [Modifications](https://github.com/mcsqd/Streaming-Media-Cordova-Plugin#3-modifications-in-fork)
 
 ## 1. Description
 
